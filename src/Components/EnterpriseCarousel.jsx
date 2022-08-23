@@ -37,6 +37,12 @@ const Carousel = styled(Swiper)`
     }
   }
 
+  .swiper-pagination {
+    margin-bottom: 80px;
+    text-align: left;
+    left: 180px;
+  }
+
 `;
 
 const EnterpriseCarousel = () => {
@@ -47,7 +53,7 @@ const EnterpriseCarousel = () => {
       slidesPerView={1}
       navigation={true}
       pagination={{ clickable: true }}
-      //    autoplay= {{ delay: 10000}}
+      autoplay= {{ delay: 10000}}
     >
       <Slide>
         <EnterpriseCard

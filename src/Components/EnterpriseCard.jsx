@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Card = styled.article`
         display: flex;
         width: 1200px;
-        align-items: center;
+            
 
 
         
