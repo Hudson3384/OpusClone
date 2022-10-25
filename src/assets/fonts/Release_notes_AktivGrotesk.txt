@@ -1,0 +1,127 @@
+==Release Notes for Aktiv Grotesk==
+
+Compiler of release notes: Dalton Maag
+Designer: Dalton Maag
+Designer URL: daltonmaag.com
+
+Release date: 2022-04-19
+
+Change log:
+----------
+v3.021:
+- Fixed bug that caused issue with rendering of tonos
+- Update to Greek capitalization feature
+- Update advance widths on /I related composites on Hair Italic
+
+v3.020:
+- Add Basic and Core subsets
+- Outline, kerning, hinting fixes
+
+v3.013:
+- Added generation of Arabic and Corp subsets for Desktop and App fonts
+
+v3.012:
+- Stylemap minor update 
+
+v3.011:
+- Add Arabic and Corp subsets for webfonts 
+
+v3.010: 
+- Greek kerning fixes and fixed epsilon in black weights
+- New vertical metrics approach (metrics version 4.000)
+- Screen optimization
+- Added MKD/SRB /sha localisation
+- Added static fonts to release
+- Adjusted Aring to more commonly accepted form
+- Minor kerning and component alignment fixes
+- Rename styles for Width Weight Slant naming scheme
+
+v3.000:
+- Add Cyrillic, Greek, Vietnamese and Symbols
+
+v2.003:
+- Add overlap flags for glyphs and composites (bug fix)
+
+v2.002:
+- Added Ruble, Hdotbelow, hdotbelow, Ldotbelow, ldotbelow and legacy ligatures
+- Corrected encoding of nbhyphen
+- Corrected design of initial and medial alefMaksura
+
+v2.001:
+- Urdu OpenType feature fixed
+
+v2.000
+- New SemiBold instance
+- Add support for Arabic
+
+
+Basic information
+-----------------
+
+- Font family name: 
+    - Static: Aktiv Grotesk, Aktiv Grotesk Cd, Aktiv Grotesk Ex
+    - Variable: Aktiv Grotesk VF
+    
+- TrueType Version record: 3.021
+- Character Set: All European Latin, Arabic, Cyrillic, Greek, Vietnamese
+- Supported scripts: Latin, Arabic, Greek, Cyrillic
+- Usage: Text and Display
+- Number of glyphs: 1466
+- Static weights: 9 (Hair, Thin, Light, Regular, Medium, SemiBold, Bold, XBold, Black)
+- Static widths: 3 (Condensed, Normal, Extended)
+
+- Instances and static font files: 54 
+
+Cd Hair, Cd Thin, Cd Light, Cd Regular, Cd Medium, Cd SemiBold, Cd Bold, Cd XBold, Cd Black
+Cd Hair Italic, Cd Thin Italic, Cd Light Italic, Cd Italic, Cd Medium Italic, Cd SemiBold Italic, Cd Bold Italic, Cd XBold Italic, Cd Black Italic
+Hair, Thin, Light, Regular, Medium, SemiBold, Bold, XBold, Black
+Hair Italic, Thin Italic, Light Italic, Italic, Medium Italic, SemiBold Italic, Bold Italic, XBold Italic, Black Italic
+Ex Hair, Ex Thin, Ex Light, Ex Regular, Ex Medium, Ex SemiBold, Ex Bold, Ex XBold, Ex Black
+Ex Hair Italic, Ex Thin Italic, Ex Light Italic, Ex Italic, Ex Medium Italic, Ex SemiBold Italic, Ex Bold Italic, Ex XBold Italic, Ex Black Italic
+
+Variable Font files in this release: 5
+
+    File: AktivGroteskVF_WghtWidthItal.ttf
+        Number of axes: 3
+            - Weight
+                tag: wght
+                range: 100 (Hair) - 900 (Black)
+            - Width
+                tag: wdth
+                range: 75 (Condensed) - 125 (Extended)
+            - Italic
+                tag: ital
+                range: 0 (Upright) - 1 (Italic)
+
+    File: AktivGroteskVF_WghtWidth.ttf and AktivGroteskVF_Italics_WghtWdth:
+        Number of axes: 2
+            - Weight
+            - Width
+        Upright and Italic styles are separated into two files; the font weight of file can be controlled through the Weight axis. The Italic axis is deactivated.
+
+    File: AktivGroteskVF_Wght.ttf and AktivGroteskVFItal_Wght.ttf
+        Number of axes: 1
+            - Weight
+        Upright and Italic styles are separated into two files; the font weight of file can be controlled through the Weight axis. The Italic axis is deactivated.        
+ 
+
+Technology
+----------
+
+File formats:
+    - Static fonts: 
+        - Desktop: TTF (TrueType-based OpenType format)
+        - Apps: TTF (TrueType-based OpenType format)
+        - Webfonts: WOFF; WOFF2 (Web Open Font Format). Subset webfonts provided for Deva and Corp character sets.     
+
+    - Variable: 
+        - Desktop: TTF (TrueType-based OpenType format)
+        - Apps: TTF (TrueType-based OpenType format)
+        - Webfonts: WOFF; WOFF2 (Web Open Font Format).       
+
+Screen optimization information: 
+- PixelFix CTAA screen optimization technology.
+
+Default numerals: 
+- Tabular for Latin. Proportional numerals accessible via OpenType features (pnum feature)
+- Proportional for Arabic. 

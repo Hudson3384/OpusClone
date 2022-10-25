@@ -4,10 +4,6 @@ import styled from 'styled-components';
 const Card = styled.article`
         display: flex;
         width: 1200px;
-            
-
-
-        
     `
     const CardContent = styled.div`
         display: flex;
@@ -67,8 +63,6 @@ const Card = styled.article`
             height: 50px;
             border: solid #000000 1px;
             &:before {
-                width: 25px;
-                left: 24px;
                 content: "";
                 position: absolute;
                 background: #C22F45;

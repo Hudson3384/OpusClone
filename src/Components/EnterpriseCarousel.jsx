@@ -9,13 +9,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
-const Carousel = styled(Swiper)`
+
+
+const EnterpriseCarousel = () => {
+
+
+  const Carousel = styled(Swiper)`
     --swiper-navigation-size: 22px;
     --swiper-theme-color: #c22f45; 
   .swiper-slide {
     width: 100%;
-    padding: 100px 90px;
-  }
+    padding:  90px;
+  } 
 
   .swiper-button-prev {
     font-size: 4rem;
@@ -44,8 +49,6 @@ const Carousel = styled(Swiper)`
   }
 
 `;
-
-const EnterpriseCarousel = () => {
   return (
     <Carousel
       modules={[Navigation, Pagination, Autoplay]}

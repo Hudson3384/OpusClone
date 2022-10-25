@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+
+
+
 
 const Baseline = styled.div`
   width: 100%;
-  height: 980px;
+  display: flex;
+  flex-direction: column;
+
   align-items: center;
 `;
 const ImageContainer = styled.div`
+  width: 100%;
   position: absolute;
   background: #000;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   img {
+    width: 100%;
     opacity: 0.2;
   }
 `;
@@ -26,6 +33,13 @@ const VideoContainer = styled.div`
     position: relative;
     top: 50px;
     filter: grayscale(1);
+  }
+  iframe {
+    position: relative;
+    top: 50px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px 1px;
+    z-index: 5;
   }
   button {
     cursor: pointer;
@@ -50,7 +64,10 @@ const VideoContainer = styled.div`
   const Text = styled.section`
       margin: 60px;
       display: flex;
-      width: 1200px;
+      justify-content: center;
+      max-width: 1200px;
+      width: 80%;
+      padding: 0 30px;
 
   `
   const TextContent = styled.div`
@@ -59,9 +76,11 @@ const VideoContainer = styled.div`
     h3 {
       font-size: 40px;
       padding: 40px 0;
+      color: black;
+      font-weight: bold;
     }
     p {
-      font-size: 14px;
+      font-size: 1.6rem;
       line-height: 1.6rem;
     }
 
@@ -69,51 +88,49 @@ const VideoContainer = styled.div`
   const ButtonContainer = styled.div`
     width: 50%;
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
   `
   const CallButton = styled.a`
        text-decoration: none;
        margin: 40px 0 0 0;
-       display: block;
-       padding: 18px 0 16px 90px;
+       justify-content: center;
+       align-items: center;
+       display: flex;
+       flex-direction: row;
        font-size: 14px;
        line-height: 14px;
        font-weight: 200;
        text-transform: uppercase;
-       letter-spacing: 2px;
        color: black;
        border: 1px solid #727272;
        transition: all 0.3s;
        width: 230px;
        height: 50px;
-       border: solid #000000 1px;
        &:before {
-        width: 25px;
-         left: 24px;
-         content: "";
-         position: absolute;
-        background: #C22F45;
-        width: 32px;
-        height: 2px;
-        left: 33px;
-        top: calc(50% - 1px);
-          }
+                content: "";
+                background: #C22F45;
+                width: 32px;
+                height: 2px;
+                margin-right: 20px;
+                
+      
+              }
                 &:hover {
-                    letter-spacing: 0.2em;
+                    letter-spacing: 0.1rem;
                 }
         
   `
 
 
 const VideoSection = () => {
+  const [onClickVideo, setonClickVideo] = useState(true);
+  const handleVideoClick = () => {
+    setonClickVideo(!onClickVideo)
+    console.log(onClickVideo)
+  }
 
-    const [video, setvideo] = useState("src/assets/videos/home.mp4");
-    //const [onClickVideo, setonClickVideo] = useState(false);
-    const handleVideoClick = () => {
-        // setonClickVideo(true)
-        setvideo('https://youtu.be/eiP8Ncnbv9k')
-    }
+
   return (
     <>
     <Baseline>
@@ -121,9 +138,14 @@ const VideoSection = () => {
         <img src="src/assets/images/banner.webp" />
       </ImageContainer>
       <VideoContainer>
+        {onClickVideo ?
         <video autoPlay loop muted>
-          <source src={video} type="video/mp4" />
-        </video>
+          <source src="src/assets/videos/home.mp4" type="video/mp4" />
+        </video> : 
+        <iframe width="728" height="410" autoPlay src="https://www.youtube.com/embed/eiP8Ncnbv9k?autoplay=1" title="YouTube video player" frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        }
+        
         <button onClick={handleVideoClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -150,9 +172,9 @@ const VideoSection = () => {
             tornarem concretos.</p>
         </TextContent>
         <ButtonContainer>
-        <CallButton>
-            <span>CONHEÇA A OPUS</span>
-        </CallButton>
+          <CallButton>
+              <span>CONHEÇA A OPUS</span>
+          </CallButton>
         </ButtonContainer>
         
     </Text>
